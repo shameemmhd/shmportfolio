@@ -23,13 +23,15 @@
 
 *{ box-sizing: border-box; }
 
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; }
 
 body{
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   line-height: 1.7;
   cursor: default;
 }
@@ -486,6 +488,7 @@ a{ text-decoration: none; color: inherit; transition: color .25s ease; }
   .avatar-core{ width: 160px; height: 160px; font-size: 2.6rem; }
   .floating-card{ padding: 10px 14px; }
   .timeline{ padding-left: 44px; }
+  .timeline::before { left: 17px; }
   .timeline-dot{ left: -44px; width: 36px; height: 36px; font-size: .95rem; }
 }
 
@@ -497,4 +500,21 @@ a{ text-decoration: none; color: inherit; transition: color .25s ease; }
   .avatar-ring-outer{ position: relative; margin-bottom: 10px; }
   .orbit-dot{ display: none; }
   .cursor-dot, .cursor-ring{ display: none !important; }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title { font-size: 2.1rem; }
+  .hero-role { font-size: 1.2rem; min-height: 2.8rem; }
+  .section-padding { padding: 60px 0; }
+  
+  .avatar-ring-outer { width: 220px; height: 220px; }
+  .avatar-ring-inner { width: 180px; height: 180px; }
+  .avatar-core { width: 140px; height: 140px; font-size: 2.2rem; }
+  
+  .stat-card { padding: 14px 12px; }
+  .stat-card h3 { font-size: 1.6rem; }
+  .stat-card p { font-size: 0.8rem; }
+  
+  .timeline-content { padding: 20px 16px; }
+  .service-card { padding: 24px 20px; }
 }
